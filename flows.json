@@ -1,0 +1,75 @@
+[
+    {
+        "id": "3f1fa0a181dc6338",
+        "type": "subflow",
+        "name": "bob",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 240,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "9b9af472204a6004"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 480,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "9b9af472204a6004",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {
+            "module": "node-red-contrib-bob-test",
+            "type": "bob",
+            "version": "0.0.1",
+            "desc": "a test node to see a new method of developing costom nodes",
+            "keywords": "node-red,bob",
+            "license": "Apache-2.0"
+        },
+        "color": "#DDAA99"
+    },
+    {
+        "id": "9b9af472204a6004",
+        "type": "function",
+        "z": "3f1fa0a181dc6338",
+        "name": "function 1",
+        "func": "msg.payload = \"bob\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "bob",
+                "module": "bob"
+            }
+        ],
+        "x": 360,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c08d05ac496c790f",
+        "type": "subflow:3f1fa0a181dc6338",
+        "z": "8e0ad04c81208871",
+        "name": "",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    }
+]
